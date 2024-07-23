@@ -31,7 +31,7 @@ body{
 }
 
 .header__menu__link{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fuente-montserrat);
     font-weight: 600;
     color: var(--color-terciario);
@@ -46,23 +46,24 @@ body{
     display: flex;
     align-items: center;
     padding: 8% 15%;
-    justify-content: space-between;  
+    justify-content: space-between; 
+    gap: 82px; 
 }
 
 .presentacion__contenido{
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .presentacion__contenido__titulo{
-    font-size: 36px;
+    font-size: 2.5rem;
     font-family: var(--fuente-krona);
 }
 
 .presentacion__contenido__texto{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fuente-montserrat);
 }
 
@@ -80,17 +81,17 @@ body{
 
 .presentacion__enlaces__subtitulos{
     font-family: var(--fuente-krona);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
 .presentacion__enlaces__link{
-    width: 378px;
+    width: 50%;
     text-align: center;
     padding: 21.5px 0px;
     border-radius: 8px;
     font-family: var(--fuente-montserrat);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
     color:var(--color-secundario);
@@ -104,12 +105,39 @@ body{
     background-color: var(--color-hover);
 }
 
+.presentacion__img{
+    width: 50%;
+}
+
 .footer{
     background-color: var(--color-terciario);
     padding: 24px;
     color: var(--color-primario);
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fuente-montserrat);
     font-weight: 400;
 }
+
+@media (max-width: 1200px){
+    .header{
+        padding: 10% 10% 10% 10%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+    
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido{
+        width: auto;
+    }
+}
+
+/* Podemos definir un ancho máximo de "480px" para el celular: @media (max-width: 480px), y en otra media query definir un ancho máximo de "800px" para las tabletas: @media (max-width: 800px), y luego asignamos los ajustes necesarios dentro de cada media query, de esta manera tendremos nuestro sitio 100% responsivo.
+
+También podemos definir rangos para los tamaños de pantalla con una única media query, asignamos el valor mínimo y luego el valor máximo separándolos con el atributo "and", así: @media (min-width: 480px ) and (max-width: 800px), en este caso, los estilos se aplicarán en pantallas de al menos "480px" y como máximo "800px". */
